@@ -28,13 +28,21 @@ public class Methoden {
         }
         distanceP1P2 = Math.sqrt(distanceP1P2);
         return distanceP1P2;
+    }
+    public static String primefactorisation(int n){
+        String result = "Primefactorisation of " + n + " is: ";
+        int primeFactor = 2;
+        while (n!=1){
+            while (n % primeFactor == 0){
+                n = n / primeFactor;
+                result = result + primeFactor + "*";
 
-
-
-        
-        
+            }
+            primeFactor +=1;
+        }
+        String resultFinal = result.substring(0, result.length() - 1);
+        return resultFinal;
     
-
     }
 
     public static void main(String[] args){
@@ -43,6 +51,7 @@ public class Methoden {
         System.out.println(hours(3));
         System.out.println(hours(75));
         System.out.println(hours(3000));
+        System.out.println(hours(5800));
         // TODO: Schreibe mehr Testcode
         System.out.println();
 
@@ -52,8 +61,8 @@ public class Methoden {
         System.out.println(distance(new int[]{3,4,6}, new int[]{7,10,3}));
         System.out.println(distance(new int[]{3,4,6,0}, new int[]{7,10,3}));
 
-        // TODO: Schreibe Testcode für die Aufgabe
-        System.out.println();
+        // TODO: Schreibe Testcode für die Aufgabe c
+        System.out.println(primefactorisation(20));
     }
     
 }
