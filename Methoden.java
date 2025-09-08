@@ -31,6 +31,9 @@ public class Methoden {
     }
     public static String primefactorisation(int n){
         String result = "Primefactorisation of " + n + " is: ";
+        if (n <= 1){
+            return "Input must be greater than 1";
+        }
         int primeFactor = 2;
         while (n!=1){
             while (n % primeFactor == 0){
@@ -63,6 +66,7 @@ public class Methoden {
 
         // TODO: Schreibe Testcode für die Aufgabe c
         System.out.println(primefactorisation(20));
+        System.out.println(primefactorisation(-20));
     }
     
 }
